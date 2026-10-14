@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test // MERN · Java · Git</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Matrix / Scanline Overlay -->
+  <div class="scanlines"></div>
+  <canvas id="matrix"></canvas>
+
+  <!-- Sidebar Nav -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="glitch" data-text="TEST">TEST</span>
+    </div>
+    <nav class="side-nav">
+      <a href="#hero" class="side-link active" data-section="hero"><span class="num">00</span> INIT</a>
+      <a href="#about" class="side-link" data-section="about"><span class="num">01</span> ABOUT</a>
+      <a href="#stack" class="side-link" data-section="stack"><span class="num">02</span> STACK</a>
+      <a href="#work" class="side-link" data-section="work"><span class="num">03</span> WORK</a>
+      <a href="#git" class="side-link" data-section="git"><span class="num">04</span> GIT</a>
+      <a href="#connect" class="side-link" data-section="connect"><span class="num">05</span> CONNECT</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="status-bar">
+        <span class="status-dot"></span>
+        SYSTEM ONLINE
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Toggle -->
+  <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Main Content -->
+  <main class="main" id="main">
+
+    <!-- HERO / TERMINAL -->
+    <section id="hero" class="panel hero-panel">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="term-dot"></span>
+          <span class="term-dot"></span>
+          <span class="term-dot"></span>
+          <span class="term-title">test@dev:~</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="line"><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+          <div class="line output" id="line-name"></div>
+          <div class="line"><span class="prompt">$</span> <span class="cmd">cat skills.txt</span></div>
+          <div class="line output" id="line-skills"></div>
+          <div class="line"><span class="prompt">$</span> <span class="cmd">echo $STATUS</span></div>
+          <div class="line output" id="line-status"></div>
+          <div class="line"><span class="prompt">$</span> <span class="cursor">_</span></div>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <h1 class="hero-glitch" data-text="TEST">TEST</h1>
+        <p class="hero-tag">MERN STACK · JAVA · GIT / GITHUB</p>
+        <div class="hero-actions">
+          <a href="#work" class="cyber-btn">VIEW WORK</a>
+          <a href="#connect" class="cyber-btn outline">CONNECT</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="panel">
+      <div class="panel-header">
+        <span class="panel-id">01</span>
+        <h2>ABOUT_ME</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-block">
+          <p class="about-lead">
+            Full-stack developer focused on building fast, scalable applications 
+            with the <span class="neon">MERN</span> stack and solid <span class="neon">Java</span> backends. 
+            Clean Git workflows and production-ready code are non-negotiable.
+          </p>
+          <p>
+            I ship features end-to-end — from MongoDB schemas and Express APIs 
+            to React interfaces and Spring Boot microservices. Every commit is intentional.
+          </p>
+        </div>
+        <div class="stat-row">
+          <div class="cyber-stat">
+            <div class="stat-value" data-count="40">0</div>
+            <div class="stat-label">PROJECTS</div>
+          </div>
+          <div class="cyber-stat">
+            <div class="stat-value" data-count="5">0</div>
+            <div class="stat-label">YEARS</div>
+          </div>
+          <div class="cyber-stat">
+            <div class="stat-value" data-count="1200">0</div>
+            <div class="stat-label">COMMITS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="panel">
+      <div class="panel-header">
+        <span class="panel-id">02</span>
+        <h2>TECH_STACK</h2>
+      </div>
+
+      <div class="stack-tabs">
+        <button class="stack-tab active" data-tab="frontend">FRONTEND</button>
+        <button class="stack-tab" data-tab="backend">BACKEND</button>
+        <button class="stack-tab" data-tab="tools">TOOLS</button>
+      </div>
+
+      <div class="stack-panels">
+        <div class="stack-panel active" id="tab-frontend">
+          <div class="hex-grid">
+            <div class="hex" data-skill="React"><span>React</span><div class="hex-pct">95%</div></div>
+            <div class="hex" data-skill="JS/TS"><span>JS / TS</span><div class="hex-pct">92%</div></div>
+            <div class="hex" data-skill="HTML/CSS"><span>HTML/CSS</span><div class="hex-pct">90%</div></div>
+            <div class="hex" data-skill="Next.js"><span>Next.js</span><div class="hex-pct">85%</div></div>
+            <div class="hex" data-skill="Redux"><span>Redux</span><div class="hex-pct">88%</div></div>
+            <div class="hex" data-skill="Tailwind"><span>Tailwind</span><div class="hex-pct">90%</div></div>
+          </div>
+        </div>
+        <div class="stack-panel" id="tab-backend">
+          <div class="hex-grid">
+            <div class="hex" data-skill="Node"><span>Node.js</span><div class="hex-pct">93%</div></div>
+            <div class="hex" data-skill="Express"><span>Express</span><div class="hex-pct">91%</div></div>
+            <div class="hex" data-skill="MongoDB"><span>MongoDB</span><div class="hex-pct">90%</div></div>
+            <div class="hex" data-skill="Java"><span>Java</span><div class="hex-pct">88%</div></div>
+            <div class="hex" data-skill="Spring"><span>Spring</span><div class="hex-pct">85%</div></div>
+            <div class="hex" data-skill="REST"><span>REST/GQL</span><div class="hex-pct">87%</div></div>
+          </div>
+        </div>
+        <div class="stack-panel" id="tab-tools">
+          <div class="hex-grid">
+            <div class="hex" data-skill="Git"><span>Git</span><div class="hex-pct">95%</div></div>
+            <div class="hex" data-skill="GitHub"><span>GitHub</span><div class="hex-pct">94%</div></div>
+            <div class="hex" data-skill="Docker"><span>Docker</span><div class="hex-pct">80%</div></div>
+            <div class="hex" data-skill="CI/CD"><span>CI/CD</span><div class="hex-pct">82%</div></div>
+            <div class="hex" data-skill="AWS"><span>AWS</span><div class="hex-pct">75%</div></div>
+            <div class="hex" data-skill="Jest"><span>Jest</span><div class="hex-pct">83%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-readout" id="skill-readout">
+        <span class="readout-label">SELECT A TECH</span>
+        <p>Click any hexagon to inspect.</p>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="panel">
+      <div class="panel-header">
+        <span class="panel-id">03</span>
+        <h2>SELECTED_WORK</h2>
+      </div>
+
+      <div class="work-filters">
+        <button class="filter active" data-filter="all">ALL</button>
+        <button class="filter" data-filter="mern">MERN</button>
+        <button class="filter" data-filter="java">JAVA</button>
+      </div>
+
+      <div class="work-track" id="work-track">
+        <article class="work-card" data-cat="mern">
+          <div class="card-num">01</div>
+          <h3>Project 1</h3>
+          <p>Full-stack MERN application with authentication, real-time features and clean architecture.</p>
+          <div class="card-tags"><span>React</span><span>Node</span><span>MongoDB</span></div>
+          <div class="card-links">
+            <a href="#">DEMO</a>
+            <a href="#">CODE</a>
+          </div>
+        </article>
+        <article class="work-card" data-cat="mern">
+          <div class="card-num">02</div>
+          <h3>Project 2</h3>
+          <p>Real-time application built with Socket.io, React and Express. Focus on performance.</p>
+          <div class="card-tags"><span>Socket.io</span><span>React</span><span>Express</span></div>
+          <div class="card-links">
+            <a href="#">DEMO</a>
+            <a href="#">CODE</a>
+          </div>
+        </article>
+        <article class="work-card" data-cat="java">
+          <div class="card-num">03</div>
+          <h3>Project 3</h3>
+          <p>Spring Boot REST API with JWT security, role-based access and comprehensive testing.</p>
+          <div class="card-tags"><span>Java</span><span>Spring Boot</span><span>JPA</span></div>
+          <div class="card-links">
+            <a href="#">DEMO</a>
+            <a href="#">CODE</a>
+          </div>
+        </article>
+        <article class="work-card" data-cat="mern">
+          <div class="card-num">04</div>
+          <h3>Project 4</h3>
+          <p>Next.js frontend with MongoDB backend. SEO optimized and fully responsive.</p>
+          <div class="card-tags"><span>Next.js</span><span>MongoDB</span><span>Tailwind</span></div>
+          <div class="card-links">
+            <a href="#">DEMO</a>
+            <a href="#">CODE</a>
+          </div>
+        </article>
+        <article class="work-card" data-cat="java">
+          <div class="card-num">05</div>
+          <h3>Project 5</h3>
+          <p>Event-driven Java microservice with Docker, messaging and circuit breakers.</p>
+          <div class="card-tags"><span>Java</span><span>Docker</span><span>Kafka</span></div>
+          <div class="card-links">
+            <a href="#">DEMO</a>
+            <a href="#">CODE</a>
+          </div>
+        </article>
+        <article class="work-card" data-cat="mern">
+          <div class="card-num">06</div>
+          <h3>Project 6</h3>
+          <p>Analytics dashboard with live charts, role permissions and export capabilities.</p>
+          <div class="card-tags"><span>React</span><span>Node</span><span>Charts</span></div>
+          <div class="card-links">
+            <a href="#">DEMO</a>
+            <a href="#">CODE</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- GIT -->
+    <section id="git" class="panel">
+      <div class="panel-header">
+        <span class="panel-id">04</span>
+        <h2>GIT_ACTIVITY</h2>
+      </div>
+      <div class="git-layout">
+        <div class="git-stats">
+          <div class="git-box">
+            <span class="git-num" data-count="42">0</span>
+            <span>REPOS</span>
+          </div>
+          <div class="git-box">
+            <span class="git-num" data-count="184">0</span>
+            <span>STARS</span>
+          </div>
+          <div class="git-box">
+            <span class="git-num" data-count="67">0</span>
+            <span>FORKS</span>
+          </div>
+          <div class="git-box">
+            <span class="git-num" data-count="312">0</span>
+            <span>FOLLOWERS</span>
+          </div>
+        </div>
+        <div class="commit-feed" id="commit-feed">
+          <!-- Generated by JS -->
+        </div>
+        <a href="#" class="cyber-btn full">GITHUB / test</a>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section id="connect" class="panel">
+      <div class="panel-header">
+        <span class="panel-id">05</span>
+        <h2>CONNECT</h2>
+      </div>
+      <div class="connect-grid">
+        <div class="connect-info">
+          <p class="connect-lead">Ready to build something solid? Drop a message.</p>
+          <div class="connect-links">
+            <a href="#" class="connect-item">
+              <span class="ci-label">EMAIL</span>
+              <span class="ci-value">test</span>
+            </a>
+            <a href="#" class="connect-item">
+              <span class="ci-label">GITHUB</span>
+              <span class="ci-value">test</span>
+            </a>
+            <a href="#" class="connect-item">
+              <span class="ci-label">LINKEDIN</span>
+              <span class="ci-value">test</span>
+            </a>
+          </div>
+        </div>
+        <form class="cyber-form" id="cyber-form">
+          <div class="form-row">
+            <input type="text" id="c-name" placeholder="NAME" required />
+            <input type="email" id="c-email" placeholder="EMAIL" required />
+          </div>
+          <input type="text" id="c-subject" placeholder="SUBJECT" required />
+          <textarea id="c-msg" rows="4" placeholder="MESSAGE" required></textarea>
+          <button type="submit" class="cyber-btn full">TRANSMIT</button>
+          <div class="form-msg" id="form-msg"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© 2026 TEST — ALL SYSTEMS NOMINAL</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
